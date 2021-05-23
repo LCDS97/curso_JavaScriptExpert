@@ -13,11 +13,34 @@ avgTemp[3] = 38
 avgTemp[4] = 26.5
 
 // NOTE Acessando o array do temp pelo número de indice / Accessing an array named temp with the index number
-console.log(avgTemp[2])
+//console.log(avgTemp[2])
 
 // NOTE Inicializando o array como instancia de um tipo de objeto, não é a melhor prática utilizr assim / Starting an array like a object instance, this is not a good practice to use in projects
 var daysOfWeek = new Array('Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
 
-console.log(daysOfWeek.length)
+// console.log(daysOfWeek.length)
+
+// NOTE Class - 5 Acessing Arrays through interation
+
+var monthsOfYear = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+for(var i = 0; i < monthsOfYear.length; i++) {
+    console.log(monthsOfYear[i])
+}
+
+var fibonacci = []
+fibonacci[0] = 0
+fibonacci[1] = 1
+fibonacci[2] = 1
+
+for(var i = 3; i < 20; i++) {
+    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2]
+}
+
+//console.log(fibonacci)
+
+for(var i = 0; i < fibonacci.length; i++) {
+    console.log(fibonacci[i])
+}
 
 
