@@ -71,7 +71,7 @@ books.clear()
 books.print()
 
 // !SECTION -
-
+console.log('============ Analyzing the stack ============')
 // SECTION - Class 14 - Analyzing the stack in the console
 var booksStack = new Stack()
 
@@ -89,6 +89,31 @@ booksStack.pop()
 booksStack.print()
 booksStack.pop()
 booksStack.isEmpty()
+
+// !SECTION -
+console.log('========= Decimal to binary =========')
+// SECTION Class 15 - Decimal to binary
+
+// NOTE Creating three variables to atribute a decimal number and convert to binary
+function decimalTobinary(decNumber){
+    var restStack = [],
+    rest,
+    binaryString= ''
+
+    while(decNumber > 0) { // NOTE Analyse if the number is greater than zero
+        rest = Math.floor(decNumber % 2) // NOTE The rest of the number
+        restStack.push(rest) // NOTE Get a push to final item [1,1,1,0,1]
+        decNumber = Math.floor(decNumber / 2)// Division of the number that is allocated in the rest variable, the last number cannot be divisible by 2, so automatically the result is 1 because of the push, and after that analyzing the decNumber is not greater than zero
+    }
+
+    while(restStack.length > 0) { // NOTE restStack is the length of 5 elements ([1,1,1,0,1]) and attribute this to the pop condition
+        binaryString += restStack.pop().toString()
+    } // NOTE The loop add the last number of the restStack to string, so the result is 1,0,1,1,1
+
+    return binaryString
+}
+
+console.log(decimalTobinary(23))
 
 
 
