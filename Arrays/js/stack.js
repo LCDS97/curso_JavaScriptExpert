@@ -4,6 +4,8 @@
 
 
 // NOTE Stacks is object-oriented and introduce the concept of LIFO (Last In First Out)
+
+// SECTION - Class 12 - Stacks methods
 function Stack() {
     var items = []
 
@@ -51,16 +53,43 @@ function Stack() {
         console.log(items.toString())
     }
 }
+// !SECTION - 
 
+// SECTION Class 13 - Testing the stack
 var books = new Stack()
 
+// NOTE Adding items to final of the stack with the method push
 books.push('Horror')
 books.push('Comedy')
 books.push('Romance')
 books.push('Documentary')
 books.push('Fiction')
 
+// NOTE Showing the new books added and cleared all items of the stack
 books.print()
+books.clear()
+books.print()
+
+// !SECTION -
+
+// SECTION - Class 14 - Analyzing the stack in the console
+var booksStack = new Stack()
+
+booksStack.isEmpty()
+booksStack.push('Self-help')
+booksStack.print()
+booksStack.push('Technology')
+booksStack.print()
+booksStack.push('Religious')
+booksStack.print()
+
+booksStack.pop()
+booksStack.print()
+booksStack.pop()
+booksStack.print()
+booksStack.pop()
+booksStack.isEmpty()
+
 
 
 
