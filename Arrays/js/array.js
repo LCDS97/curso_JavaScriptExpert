@@ -2,7 +2,7 @@
 
 // SECTION Working with arrays
 
-// SECTION Class 3
+// SECTION Class 3 - Introduction to array
 // NOTE Starting an array, and inserting value below and inside this array
 var avgTemp = []
 
@@ -16,15 +16,14 @@ avgTemp[4] = 26.5
 //console.log(avgTemp[2])
 
 // !SECTION - 
-// SECTION Class 4
+// SECTION Class 4 - Creation and Initialization with arrays
 // NOTE Starting an array like a object instance, this is not a good practice to use in projects
 var daysOfWeek = new Array('Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
 
 // console.log(daysOfWeek.length)
 
 // !SECTION -
-// SECTION Class 5
-// NOTE Class - 5 Acessing Arrays through interation
+// SECTION Class 5 - Acessing Arrays through interation
 
 var monthsOfYear = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
@@ -50,9 +49,8 @@ for(var i = 0; i < fibonacci.length; i++) {
 }
 // !SECTION
 
-// SECTION Class 6
+// SECTION Class 6 - Inserting elements in the array
 
-// NOTE Inserting elements in the array
 var numbers = [0,1,2,3,4,5,6,7,8,9]
 
 // NOTE Two ways do this
@@ -77,8 +75,7 @@ numbers.unshift(-4)
 
 // !SECTION -
 
-// SECTION Class 7
-// NOTE Removing elements of the array
+// SECTION Class 7 -Removing elements of the array
 
 // NOTE Removing the last index of the array with .pop()
 numbers.pop()
@@ -100,8 +97,7 @@ console.log('after splice')
 
 // !SECTION -
 
-// SECTION Class 8
-// NOTE Inserting a index in an specific position
+// SECTION Class 8 - Inserting a index in an specific position
 
 // NOTE To remove elements, the first parameter is where the deletion will occur by selecting the number of is index, after the comma will specify how many index will be deleted
 numbers.splice(3, 3)
@@ -111,6 +107,29 @@ console.log(numbers)
 console.log('inserting items with splice')
 numbers.splice(3, 0, 'ok','another','text')
 console.log(numbers)
+
+// !SECTION
+
+// SECTION Class 9 - Bidimensional Arrays
+
+
+var avgTempWeek = []
+
+var avgTempWeek1 = [31,25.2,19,27,10.5,12,16]
+var avgTempWeek2 = [36,25.2,19,17,14.5,13,15.9]
+
+
+avgTempWeek[0] = avgTempWeek1
+avgTempWeek[1] = avgTempWeek2
+
+//Arrays bidiomensinals funcionam da seguinte forma, você acessa o indice dentro desse conjunto de array(avgTempWeek), e para selecionar um item especifico, você define pela posição do número de indice onde se encontra o index
+
+// NOTE Bidimensional arrays work with the specific number inside of the array collection (avgTempWeek), and to select the children content can be accessed by the index number inside of the father array
+console.log(avgTempWeek[0][4])
+
+
+
+
 
 
 
