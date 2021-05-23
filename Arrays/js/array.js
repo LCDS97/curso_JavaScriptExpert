@@ -73,7 +73,46 @@ numbers.unshift(-2)
 numbers.unshift(-3)
 numbers.unshift(-4)
 
-numbers[0] = 40
+
+
+// !SECTION -
+
+// SECTION Class 7
+// NOTE Removing elements of the array
+
+// NOTE Removing the last index of the array with .pop()
+numbers.pop()
+numbers.pop()
+numbers.pop()
+numbers.pop()
+numbers.pop()
+
+// NOTE Removing the first index of the array with .shift()
+numbers.shift()
+numbers.shift()
+numbers.shift()
+numbers.shift()
+
 console.log(numbers)
+console.log('after splice')
+
+
+
+// !SECTION -
+
+// SECTION Class 8
+// NOTE Inserting a index in an specific position
+
+// NOTE To remove elements, the first parameter is where the deletion will occur by selecting the number of is index, after the comma will specify how many index will be deleted
+numbers.splice(3, 3)
+console.log(numbers)
+
+// NOTE To insert elements, the first parameter is where the insertion will occur, specify with '0' that will not remove any index, after the comma, you specify the items you want to insert
+console.log('inserting items with splice')
+numbers.splice(3, 0, 'ok','another','text')
+console.log(numbers)
+
+
+
 
 
