@@ -27,7 +27,13 @@ function Stack() {
 
     this.isEmpty = function() {
         //  Will inform if the stack is empty or not
-        return items.length === 0
+        if (items != 0) {
+            return console.log('Items in the stack is: ' + items.length)
+        } else {
+            return console.log('Stack is empty!') 
+            
+        }
+
     }
 
     this.clear = function() {
@@ -45,3 +51,16 @@ function Stack() {
         console.log(items.toString())
     }
 }
+
+var books = new Stack()
+
+books.push('Horror')
+books.push('Comedy')
+books.push('Romance')
+books.push('Documentary')
+books.push('Fiction')
+
+books.print()
+
+
+
