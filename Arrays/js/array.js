@@ -106,7 +106,7 @@ console.log(numbers)
 // NOTE To insert elements, the first parameter is where the insertion will occur, specify with '0' that will not remove any index, after the comma, you specify the items you want to insert
 console.log('inserting items with splice')
 numbers.splice(3, 0, 'ok','another','text')
-console.log(numbers)
+//console.log(numbers)
 
 // !SECTION
 
@@ -126,6 +126,40 @@ avgTempWeek[1] = avgTempWeek2
 
 // NOTE Bidimensional arrays work with the specific number inside of the array collection (avgTempWeek), and to select the children content can be accessed by the index number inside of the father array
 console.log(avgTempWeek[0][4])
+
+// SECTION Class 10 - Tridimensional arrays
+
+// NOTE You can make nested arrays to work with trdimensional arrays
+
+var year = []
+
+var Summer = []
+var Winter = []
+
+var avgTempJanMonth = [15,30,35,29]
+var avgTempFevMonth = [24,25.6,31,22.6]
+
+var avgTempJulMonth = [32,34.5,36,33.1]
+var avgTempAugMonth = [39,37.5,40.1,39]
+
+Summer = [avgTempJanMonth, avgTempFevMonth]
+Winter = [avgTempJulMonth, avgTempAugMonth]
+
+year = [Summer, Winter]
+
+// NOTE Acessing the four item of avgTempJanMonth (29)
+console.log('The avgTemp is: ' + year[0][0][3])
+
+console.log('Making forEach of months')
+
+// NOTE Scrolling through the items of y (the average summer and winter temperature) that is inside x (summer and winter)
+for (var x = 0; x < year.length; x++) {
+    for (var y = 0; y < year[x].length; y++){
+        for(var z = 0; z < year[x][y].length; z++) {
+            console.log(year[x][y][z])
+        }
+    }
+}
 
 
 
