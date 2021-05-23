@@ -160,6 +160,12 @@ for (var x = 0; x < year.length; x++) {
         }
     }
 }
+// NOTE You can make the size of the multidimensional array any way you want, the logic of this is always the same
+
+// !SECTION -
+
+// SECTION Class 11 - LIFO - Last In First Out
+
 
 
 
