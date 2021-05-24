@@ -5,9 +5,9 @@
 function Queue() {
     var items = [];
 
-    this.enqueue = function() { // NOTE Add an item to the queue
+    this.enqueue = function(element) { // NOTE Add an item to the queue
         // Add an item
-        item.push(element)
+        items.push(element)
     }
 
     this.dequeue = function() { // NOTE Remove an item from the queue in the first element in the queue
@@ -22,15 +22,51 @@ function Queue() {
 
     this.isEmpty = function() {
         // Verify the queue is empty
-        return items.length === 0
+        if (items.length === 0){ return console.log("Queue is empty")} else { return console.log("Queue is not empty")}
     }
 
     this.size = function() { // NOTE Return the size of the queue
         // Return the size of the queue
-        console.log(items.toString())
+        return items.length
     }
 
     this.print = function() {
         // Print the queue in console
+        return console.log(items.toString())
     }
 }
+
+// !SECTION
+
+// SECTION Testing the queue
+
+bank = new Queue()
+
+// NOTE Adding persons in the queue
+bank.enqueue('Felipe')
+bank.print()
+bank.enqueue('Maria')
+bank.print()
+bank.enqueue('Augusto')
+bank.print()
+bank.isEmpty()
+
+// NOTE Removing a person from the queue
+bank.dequeue()
+// NOTE Showing who is the next person in the queue
+console.log('The next people in the queue is: '  + bank.front())
+bank.print()
+// NOTE Verify if the queue is empty
+bank.isEmpty()
+
+bank.dequeue()
+console.log('The next people in the queue is: '  + bank.front())
+bank.print()
+bank.isEmpty()
+
+bank.dequeue()
+// NOTE Showing now that the queue is empty
+bank.isEmpty()
+
+
+
