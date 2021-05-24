@@ -140,6 +140,9 @@ function baseConverter(decimalNumber, base) {
 
 console.log(baseConverter(123,2))
 
+// !SECTION -
+
+
 
 
 
