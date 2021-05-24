@@ -119,24 +119,26 @@ console.log(decimalTobinary(23))
 
 // SECTION Class 17 - Base Converter 
 
-function BaseConverter(decimalNumber, base) {
-    var stackRest = []
+function baseConverter(decimalNumber, base) {
+    var stackRest = [],
     restNumber,
     baseString = '',
     digits = '0123456789ABCDEF'
 
-    while(decimalNumber > 0) {
-        rest = Math.floor(decimalNumber % base)
-        stackRest.push(restNumber)
-        decimalNumber = Math.floor(decimalNumber / base)
+    while(decimalNumber > 0) { // NOTE Verify if the decimal number is greater than zero
+        restNumber = Math.floor(decimalNumber % base) // NOTE The rest number of decimal number divided by the base number
+        stackRest.push(restNumber)// NOTE Get a push of restNumber in StackRest[11,7]
+        decimalNumber = Math.floor(decimalNumber / base) // NOTE Until get the decimal number condition that is greater than zero
     }
 
-    while(stackRest.length > 0) {
+    while(stackRest.length > 0) { 
         baseString += digits[stackRest.pop()]
     }
 
     return baseString
 }
+
+console.log(baseConverter(123,2))
 
 
 
