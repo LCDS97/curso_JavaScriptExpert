@@ -115,6 +115,29 @@ function decimalTobinary(decNumber){
 
 console.log(decimalTobinary(23))
 
+// !SECTION - 
+
+// SECTION Class 17 - Base Converter 
+
+function BaseConverter(decimalNumber, base) {
+    var stackRest = []
+    restNumber,
+    baseString = '',
+    digits = '0123456789ABCDEF'
+
+    while(decimalNumber > 0) {
+        rest = Math.floor(decimalNumber % base)
+        stackRest.push(restNumber)
+        decimalNumber = Math.floor(decimalNumber / base)
+    }
+
+    while(stackRest.length > 0) {
+        baseString += digits[stackRest.pop()]
+    }
+
+    return baseString
+}
+
 
 
 
