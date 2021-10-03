@@ -15,5 +15,6 @@ class File {
 
 (async () => {
     const result = await File.csvToJson('./../mocks/threeItems-valid.csv')
+    // const result = await File.csvToJson('./../mocks/threeItems-valid.csv')
     console.log('result: ', result)
 })();
