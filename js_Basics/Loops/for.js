@@ -11,7 +11,7 @@ const amandaBag = [
 
 for (let index = 0; index < amandaBag.length; index++) {
     console.log(`${index+1}. ${amandaBag[index]}`) // NOTE You can break the loop with break after you search the item you want
-    if (amandaBag[index] == 'money') break
+    // if (amandaBag[index] == 'money') break
 }
 
 // !SECTION -
