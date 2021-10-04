@@ -56,7 +56,6 @@ result:  id,name,profession,age
 123,Lucas Santos,Javascript Estudent,24
 321,Leonardo Santos,Front-End Especialist,24
 231,Nicolas Carvalho,Python Estudent,22
-312,Amanda Santos, Administração,24
 ```
 
 
@@ -122,7 +121,7 @@ module.exports = constants;
 We will import the constants file and use the "error" object, and add on the Class File one static function if is valid or not:
 ```js
     static isValid(csvString, options = DEFAULT_OPTION){ // Passing the default options of the test
-                const [header, ...fileWithoutHeader] = csvString.split('\n') // Destructuring the header and the content on two variables
+        const [header, ...fileWithoutHeader] = csvString.split('\n') // Destructuring the header and the content on two variables
         const isHeaderValid = header === options.fields.join(',') // Verify if the header is valid
         if(!isHeaderValid){
             return {
@@ -133,6 +132,8 @@ We will import the constants file and use the "error" object, and add on the Cla
         console.log('lines',lines)
     }
 ```
+
+### Now we will test the invalid-header invalid test:
 
 
 

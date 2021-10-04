@@ -31,13 +31,25 @@ class File {
                 valid: false
             }
         }
-        console.log('lines',lines)
+        const isContentLengthAccepted = (
+            fileWithoutHeader.length > 0 &&
+            fileWithoutHeader.length <= options.maxLines
+        )
+        if(!isContentLengthAccepted){
+            return {
+                error: error.FILE_LENGTH_ERROR_MESSAGE,
+                valid: false
+            }
+        }
+
     }
+
+
 }
 
 (async () => {
-    const result = await File.csvToJson('./../mocks/invalid-header.csv')
-    // const result = await File.csvToJson('./../mocks/fourItems-invalid.csv')
+    // const result = await File.csvToJson('./../mocks/invalid-header.csv')
+    const result = await File.csvToJson('./../mocks/fourItems-invalid.csv')
     // const result = await File.csvToJson('./../mocks/threeItems-valid.csv')
-    // console.log('result: ', result)
+    console.log('result: ', result)
 })();
